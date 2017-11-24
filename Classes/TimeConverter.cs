@@ -39,7 +39,7 @@ namespace BerlinClock
                 //split time string into integer parts
                 var splitedTime = aTime.Split(':').Select(x => int.Parse(x)).ToArray();
                 
-                //Top light is on when seconds value is odd
+                //Top light is on when seconds value is even
                 TopLight = splitedTime[2] % 2 == 0 ? 'Y' : 'O';
 
                 FillFirstRow(splitedTime[0]);
