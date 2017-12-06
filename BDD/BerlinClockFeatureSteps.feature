@@ -49,3 +49,11 @@ RRRR
 OOOOOOOOOOO
 OOOO
 """
+
+Scenario: InvalidTime 34:78
+When the time is "34:78:00"
+Then an error should be presented to user
+
+Scenario: InvalidTime 29:00
+When the time is "29:00:00"
+Then an error should be presented to user
